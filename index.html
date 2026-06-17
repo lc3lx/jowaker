@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="بوكر الشرق الأوسط – منصة ألعاب الورق العربية. العب بوكر وتركس وطرنيب 41 مع لاعبين حقيقيين، فيديو مباشر، ومحفظة ذكية." />
+  <meta name="theme-color" content="#400000" />
+  <title>بوكر الشرق الأوسط | العب واربح</title>
+
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="bg-layer" aria-hidden="true"></div>
+  <div class="bg-vignette" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="assets/icon.png" alt="بوكر الشرق الأوسط" class="logo-img" width="48" height="48" />
+        <div class="logo-text">
+          <span class="logo-name">بوكر الشرق الأوسط</span>
+          <span class="logo-tag">العب · تنافس · اربح</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="التنقل">
+        <a href="#games">الألعاب</a>
+        <a href="#experience">التجربة</a>
+        <a href="#features">المميزات</a>
+        <a href="#download" class="nav-cta">حمّل التطبيق</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <div class="hero-badge anim-in" style="--d:0.1s">
+          <span class="badge-dot"></span>
+          منصة ألعاب الورق العربية الأولى
+        </div>
+
+        <h1 class="anim-in" style="--d:0.2s">
+          اجلس على <span class="gold-text">الطاولة</span><br />
+          وخُذ نصيبك من <span class="gold-text shimmer">الذهب</span>
+        </h1>
+
+        <p class="hero-lead anim-in" style="--d:0.35s">
+          <strong>بوكر الشرق الأوسط</strong> يجمع أشهر ألعاب الورق في تجربة واحدة فاخرة —
+          بوكر Texas Hold'em، تركس، وطرنيب 41. العب مع لاعبين حقيقيين، شاهدهم
+          بالفيديو المباشر، واربح عملات ذهبية يومياً.
+        </p>
+
+        <div class="hero-actions anim-in" style="--d:0.5s">
+          <a href="#download" class="btn btn-gold">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            حمّل مجاناً
+          </a>
+          <a href="#experience" class="btn btn-glass">شاهد التجربة</a>
+        </div>
+
+        <div class="hero-stats anim-in" style="--d:0.65s">
+          <div class="stat">
+            <strong data-count="50000">0</strong><span>+</span>
+            <small>لاعب نشط</small>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>3</strong>
+            <small>ألعاب ورق</small>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>24/7</strong>
+            <small>طاولات مفتوحة</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-showcase anim-in" style="--d:0.3s">
+        <div class="showcase-glow"></div>
+        <div class="showcase-ring ring-1"></div>
+        <div class="showcase-ring ring-2"></div>
+
+        <!-- Landscape device – matches app orientation -->
+        <div class="device">
+          <div class="device-bezel">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+              <img src="assets/bg-casino.png" alt="" class="screen-bg" />
+              <div class="screen-overlay"></div>
+
+              <div class="screen-ui">
+                <div class="ui-panel ui-leaderboard">
+                  <div class="ui-avatar"></div>
+                  <div class="ui-lines"><span></span><span></span></div>
+                </div>
+
+                <img src="assets/icon.png" alt="" class="ui-logo" />
+
+                <div class="ui-actions">
+                  <div class="ui-btn ui-btn-store"></div>
+                  <div class="ui-btn ui-btn-notif"></div>
+                </div>
+
+                <img src="assets/characters.png" alt="" class="ui-characters" />
+
+                <div class="ui-nav">
+                  <span></span><span></span><span></span><span class="active"></span><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/hero-characters.png" alt="" class="hero-float-characters" />
+
+        <div class="float-chip chip-1"><span>100K</span></div>
+        <div class="float-chip chip-2"><span>VIP</span></div>
+        <div class="float-card card-1">♠A</div>
+        <div class="float-card card-2">♥K</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint anim-in" style="--d:1s">
+      <span>اكتشف المزيد</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Games -->
+  <section id="games" class="games">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="section-label">ألعابنا</span>
+        <h2>ثلاث تجارب — منصة واحدة</h2>
+        <p>كل لعبة مصممة بقواعدها الأصلية، واجهة عربية، وطاولات حية على مدار الساعة</p>
+      </header>
+
+      <div class="games-showcase">
+        <article class="game-tile reveal" data-tilt>
+          <div class="game-tile-glow"></div>
+          <div class="game-tile-img">
+            <img src="assets/icon.png" alt="تكساس هولدم بوكر" />
+          </div>
+          <div class="game-tile-body">
+            <span class="game-label">الأكثر شعبية</span>
+            <h3>تكساس هولدم بوكر</h3>
+            <p>
+              انضم للحلبة العامة أو أنشئ طاولة خاصة. نظام لعب عادل، إحصائيات أسبوعية،
+              ومؤثرات بصرية سينمائية عند كل فوز. تنافس على صدارة المتصدرين.
+            </p>
+            <ul class="game-perks">
+              <li>طاولات عامة وخاصة</li>
+              <li>فيديو مباشر مع اللاعبين</li>
+              <li>لوحة متصدرين أسبوعية</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="game-tile reveal" data-tilt>
+          <div class="game-tile-glow"></div>
+          <div class="game-tile-img">
+            <img src="assets/game-trix.png" alt="تركس" />
+          </div>
+          <div class="game-tile-body">
+            <span class="game-label">كلاسيكية</span>
+            <h3>تركس</h3>
+            <p>
+              لعبة الورق المحبوبة في كل بيت عربي — 4 لاعبين، 20 جولة، وتحدٍّ
+              لا ينتهي. العب مع أصدقائك أو انضم لطاولة عشوائية فوراً.
+            </p>
+            <ul class="game-perks">
+              <li>4 لاعبين في كل جولة</li>
+              <li>ذكاء اصطناعي للعب الفردي</li>
+              <li>غرف خاصة بالدعوة</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="game-tile reveal" data-tilt>
+          <div class="game-tile-glow"></div>
+          <div class="game-tile-img">
+            <img src="assets/game-tarneeb.png" alt="طرنيب 41" />
+          </div>
+          <div class="game-tile-body">
+            <span class="game-label">جماعية</span>
+            <h3>طرنيب 41</h3>
+            <p>
+              ترسية ذكية، شراكة بالفريق، ونظام نقاط دقيق. تجربة طرنيب
+              أصيلة بلمسة عصرية — دردشة، إيموجي، وغرف مخصصة.
+            </p>
+            <ul class="game-perks">
+              <li>لعب جماعي 4×4</li>
+              <li>نظام ترسية متقدم</li>
+              <li>دردشة أثناء اللعب</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="section-label">كيف تبدأ</span>
+        <h2>من التحميل إلى الطاولة في دقائق</h2>
+        <p>ثلاث خطوات بسيطة وتكون جاهزاً للعب</p>
+      </header>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-icon">📲</div>
+          <h3>حمّل التطبيق</h3>
+          <p>سجّل حسابك مجاناً ببريدك أو رقم هاتفك — بدون تعقيد.</p>
+        </div>
+        <div class="step-connector reveal"></div>
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div class="step-icon">🎁</div>
+          <h3>احصل على مكافأة الترحيب</h3>
+          <p>عملات ذهبية مجانية عند التسجيل + مكافآت يومية من المهام والأنشطة.</p>
+        </div>
+        <div class="step-connector reveal"></div>
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div class="step-icon">🃏</div>
+          <h3>اختر طاولتك والعب</h3>
+          <p>بوكر، تركس، أو طرنيب — اختر اللعبة وانضم لأقرب طاولة متاحة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <header class="section-head reveal">
+        <span class="section-label">لماذا نحن؟</span>
+        <h2>كل ما تحتاجه في تطبيق واحد</h2>
+        <p>ميزات مصممة لتجربة لعب كاملة — من الطاولة إلى المكافآت</p>
+      </header>
+
+      <div class="features-grid">
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>📹</span></div>
+          <h3>فيديو مباشر HD</h3>
+          <p>شاهد لاعبيك وتحدث معهم أثناء الجولة — تجربة أقرب للعب الحقيقي.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>💰</span></div>
+          <h3>محفظة ذكية</h3>
+          <p>عملات ذهبية، سجل معاملات شفاف، شحن آمن، ومكافآت يومية.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>🎨</span></div>
+          <h3>متجر التخصيص</h3>
+          <p>طاولات فاخرة، إطارات أفاتار، حلقات أوراق — عبّر عن شخصيتك.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>🏆</span></div>
+          <h3>متصدرون أسبوعيون</h3>
+          <p>تنافس على المراكز الأولى في البوكر واربح جوائز حصرية.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>📋</span></div>
+          <h3>مهام وأنشطة</h3>
+          <p>أكمل تحديات يومية وفعاليات موسمية لمضاعفة أرباحك.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>👑</span></div>
+          <h3>عضوية VIP</h3>
+          <p>امتيازات حصرية، مظهر مميز، ومعاملة خاصة للاعبين المميزين.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>🎲</span></div>
+          <h3>ألعاب مصغرة</h3>
+          <p>استراحة مسلية بين الجولات — ألعاب جانبية بجوائز إضافية.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat-icon-wrap"><span>🔒</span></div>
+          <h3>لعب عادل وآمن</h3>
+          <p>تحقق بخطوتين، مراقبة للعب النزيه، وحماية متقدمة لحسابك.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="download">
+    <div class="container">
+      <div class="download-panel reveal">
+        <div class="download-panel-bg"></div>
+        <div class="download-content">
+          <img src="assets/icon.png" alt="" class="download-icon" width="100" height="100" />
+          <h2>جاهز للعب؟</h2>
+          <p>
+            حمّل <strong>بوكر الشرق الأوسط</strong> الآن وانضم لآلاف اللاعبين.
+            مجاني بالكامل — ابدأ بمكافأة ترحيب واختر طاولتك.
+          </p>
+
+          <div class="store-row">
+            <a href="#" class="store-btn" id="btn-google-play">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.006 1.006 0 0 1-.601-.918V2.732a1.006 1.006 0 0 1 .6-.918zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1.002 1.002 0 0 1 0 1.738l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
+              <div><small>متوفر على</small><strong>Google Play</strong></div>
+            </a>
+            <a href="#" class="store-btn" id="btn-app-store">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <div><small>حمّل من</small><strong>App Store</strong></div>
+            </a>
+            <a href="#" class="store-btn" id="btn-apk">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              <div><small>تحميل مباشر</small><strong>APK – Android</strong></div>
+            </a>
+          </div>
+
+          <p class="download-note">* روابط المتاجر ستُفعَّل عند النشر الرسمي</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#" class="logo logo-sm">
+        <img src="assets/icon.png" alt="" width="40" height="40" />
+        <span class="logo-name">بوكر الشرق الأوسط</span>
+      </a>
+      <nav class="footer-nav">
+        <a href="#games">الألعاب</a>
+        <a href="#features">المميزات</a>
+        <a href="#download">تحميل</a>
+        <a href="#">الخصوصية</a>
+        <a href="#">الدعم</a>
+      </nav>
+      <p class="footer-copy">© 2026 بوكر الشرق الأوسط — جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
