@@ -43,18 +43,26 @@
 
   /* ── Scroll reveal ── */
   const revealEls = document.querySelectorAll(".reveal");
-  const revealObs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObs.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -30px 0px" }
-  );
-  revealEls.forEach((el) => revealObs.observe(el));
+  if (prefersReduced || !("IntersectionObserver" in window)) {
+    revealEls.forEach((el) => el.classList.add("visible"));
+  } else {
+    const revealObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -30px 0px" }
+    );
+    revealEls.forEach((el) => revealObs.observe(el));
+    // Safety: never leave sections permanently invisible
+    setTimeout(() => {
+      revealEls.forEach((el) => el.classList.add("visible"));
+    }, 2500);
+  }
 
   /* ── Counter animation ── */
   const counter = document.querySelector("[data-count]");
