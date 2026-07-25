@@ -93,7 +93,7 @@ export const STORE_LINKS = [
   },
   {
     id: "apk",
-    href: "#",
+    href: "https://github.com/lc3lx/jowaker/releases/latest/download/app-release.apk",
     label: "تحميل مباشر",
     name: "APK – Android",
     icon: "download",
