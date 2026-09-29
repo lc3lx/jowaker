@@ -1083,6 +1083,26 @@ section { position: relative; z-index: 1; padding: 5.5rem 0; }
   .device { max-width: 100%; }
   .hero-scroll-hint { display: none; }
   .store-btn { width: 100%; justify-content: center; }
+
+  .header-inner { gap: 0.6rem; }
+  .logo-tag { display: none; }
+  .logo-name { font-size: 0.95rem; }
+  .hero { padding-top: 5.5rem; }
+  .hero h1 { font-size: clamp(1.7rem, 8vw, 2.4rem); }
+  .hero-lead { font-size: 0.95rem; }
+  .hero-showcase { min-height: 220px; }
+  .download { padding-bottom: 3rem; }
+  .download-content { padding: 1.4rem 1rem 1.6rem; }
+  .download-content h2 { font-size: 1.6rem; }
+  .footer-inner { flex-direction: column; text-align: center; gap: 0.8rem; }
+  .footer-nav { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .container { padding-inline: 0.9rem; }
+  .hero-stats { gap: 0.6rem; }
+  .stat strong { font-size: 1.15rem; }
+  .games-showcase, .features-grid { gap: 0.8rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
