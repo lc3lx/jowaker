@@ -8,4 +8,23 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
+  preview: {
+    host: "0.0.0.0",
+    port: 3002,
+    allowedHosts: [
+      "www.ordaly-system.com",
+      "ordaly-system.com",
+      "76.13.14.1",
+      "localhost",
+    ],
+  },
+  server: {
+    host: "0.0.0.0",
+    allowedHosts: [
+      "www.ordaly-system.com",
+      "ordaly-system.com",
+      "76.13.14.1",
+      "localhost",
+    ],
+  },
 });
